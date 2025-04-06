@@ -27,14 +27,6 @@
         padding: 16px 0;
         justify-content: space-between;
     }
-
-    &__more {
-        display: none;
-
-        @include abstracts.breakpoint(lg) {
-            display: block;
-        }
-    }
 }
 
 .navbar {
@@ -158,10 +150,6 @@
         box-shadow: var(--top-act-group-shadow);
         &--single {
             padding: 13px;
-        }
-
-        @include abstracts.breakpoint(md) {
-            display: none;
         }
     }
 
