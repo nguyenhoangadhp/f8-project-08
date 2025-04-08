@@ -1416,6 +1416,8 @@ html.dark {
   .navbar__list {
     flex-direction: column;
     align-items: flex-start;
+    overflow-y: auto;
+    height: calc(100% - 30px);
   }
 }
 .navbar__item:hover .dropdown {
@@ -1425,9 +1427,6 @@ html.dark {
   .navbar__item {
     width: 100%;
     justify-content: space-between;
-  }
-  .navbar__item:hover .dropdown {
-    display: none;
   }
 }
 .navbar__link {
@@ -1549,6 +1548,13 @@ html.dark {
   left: 0;
   padding-top: 54px;
 }
+@media (max-width: 991.98px) {
+  .dropdown {
+    display: block;
+    position: initial;
+    padding-top: 0;
+  }
+}
 .dropdown__inner {
   --inner-padding: 30px;
   position: relative;
@@ -1565,6 +1571,17 @@ html.dark {
   transform: translateX(-50%);
   filter: var(--dropdown-arrow-color);
 }
+@media (max-width: 991.98px) {
+  .dropdown__inner {
+    border-radius: 0;
+    padding: 0 40px;
+    background: transparent;
+    box-shadow: transparent;
+  }
+  .dropdown__inner::before {
+    content: none;
+  }
+}
 
 .top-menu {
   --main-colum-width: 292px;
@@ -1577,10 +1594,22 @@ html.dark {
   width: var(--main-colum-width);
   border-right: 1px solid var(--top-menu__main-boder-color);
 }
+@media (max-width: 991.98px) {
+  .top-menu__main {
+    width: 100%;
+    height: auto;
+    border-right: none;
+  }
+}
 
 .menu-column {
   display: flex;
   gap: 14px;
+}
+@media (max-width: 991.98px) {
+  .menu-column {
+    margin-top: 10px;
+  }
 }
 .menu-column__content {
   flex: 1;
@@ -1594,6 +1623,11 @@ html.dark {
 @media (max-width: 1199.98px) {
   .menu-column__icon {
     display: none;
+  }
+}
+@media (max-width: 991.98px) {
+  .menu-column__icon {
+    display: initial;
   }
 }
 .menu-column__icon-1 {
@@ -1616,8 +1650,18 @@ html.dark {
   font-weight: 500;
   line-height: 150%;
 }
+@media (max-width: 991.98px) {
+  .menu-column__heading {
+    margin-bottom: 26px;
+  }
+}
 .menu-column__list {
   margin-top: 19px;
+}
+@media (max-width: 991.98px) {
+  .menu-column__list {
+    margin-top: 0;
+  }
 }
 .menu-column__item--active .sub-menu {
   display: grid;
@@ -1650,6 +1694,15 @@ html.dark {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   max-height: var(--max-inner-height);
+}
+@media (max-width: 991.98px) {
+  .sub-menu {
+    height: auto;
+    position: initial;
+    grid-template-columns: 1fr;
+    margin-top: 20px;
+    padding-left: 0;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,12 +1,16 @@
 @use "../abstracts";
 .dropdown {
     display: none;
-
     width: min(1240px, 100%);
-
     position: absolute;
     left: 0;
     padding-top: 54px;
+
+    @include abstracts.breakpoint(lg) {
+        display: block;
+        position: initial;
+        padding-top: 0;
+    }
 
     &__inner {
         --inner-padding: 30px;
@@ -26,6 +30,16 @@
             transform: translateX(-50%);
             filter: var(--dropdown-arrow-color);
         }
+
+        @include abstracts.breakpoint(lg) {
+            border-radius: 0;
+            padding: 0 40px;
+            background: transparent;
+            box-shadow: transparent;
+            &::before {
+                content: none;
+            }
+        }
     }
 }
 
@@ -40,12 +54,22 @@
         max-height: var(--max-inner-height);
         width: var(--main-colum-width);
         border-right: 1px solid var(--top-menu__main-boder-color);
+
+        @include abstracts.breakpoint(lg) {
+            width: 100%;
+            height: auto;
+            border-right: none;
+        }
     }
 }
 
 .menu-column {
     display: flex;
     gap: 14px;
+
+    @include abstracts.breakpoint(lg) {
+        margin-top: 10px;
+    }
 
     &__content {
         flex: 1;
@@ -60,6 +84,10 @@
 
         @include abstracts.breakpoint(xl) {
             display: none;
+        }
+
+        @include abstracts.breakpoint(lg) {
+            display: initial;
         }
     }
 
@@ -85,10 +113,18 @@
         font-size: 1.6rem;
         font-weight: 500;
         line-height: 150%;
+
+        @include abstracts.breakpoint(lg) {
+            margin-bottom: 26px;
+        }
     }
 
     &__list {
         margin-top: 19px;
+
+        @include abstracts.breakpoint(lg) {
+            margin-top: 0;
+        }
     }
 
     &__item--active .sub-menu {
@@ -128,5 +164,17 @@
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         max-height: var(--max-inner-height);
+
+        @include abstracts.breakpoint(lg) {
+        }
+    }
+
+    @include abstracts.breakpoint(lg) {
+        height: auto;
+        position: initial;
+        grid-template-columns: 1fr;
+
+        margin-top: 20px;
+        padding-left: 0;
     }
 }
