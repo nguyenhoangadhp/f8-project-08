@@ -1,4 +1,5 @@
 @use "../abstracts";
+
 .dropdown {
     display: none;
     width: min(1240px, 100%);
@@ -7,7 +8,6 @@
     padding-top: 54px;
 
     @include abstracts.breakpoint(lg) {
-        display: block;
         position: initial;
         padding-top: 0;
     }
@@ -39,6 +39,10 @@
             &::before {
                 content: none;
             }
+        }
+
+        @include abstracts.breakpoint(sm) {
+            padding: 0 20px;
         }
     }
 }
