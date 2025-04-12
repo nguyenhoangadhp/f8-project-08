@@ -16,6 +16,7 @@
 
 .top-bar {
     position: relative;
+    z-index: 1;
 
     @extend %flexItemCenter;
 
