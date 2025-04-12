@@ -7,7 +7,7 @@
     left: 0;
     padding-top: 54px;
 
-    @include abstracts.breakpoint(lg) {
+    @include abstracts.screen(lg) {
         position: initial;
         padding-top: 0;
     }
@@ -31,7 +31,7 @@
             filter: var(--dropdown-arrow-color);
         }
 
-        @include abstracts.breakpoint(lg) {
+        @include abstracts.screen(lg) {
             border-radius: 0;
             padding: 0 40px;
             background: transparent;
@@ -41,7 +41,7 @@
             }
         }
 
-        @include abstracts.breakpoint(sm) {
+        @include abstracts.screen(sm) {
             padding: 0 20px;
         }
     }
@@ -59,7 +59,7 @@
         width: var(--main-colum-width);
         border-right: 1px solid var(--top-menu__main-boder-color);
 
-        @include abstracts.breakpoint(lg) {
+        @include abstracts.screen(lg) {
             width: 100%;
             height: auto;
             border-right: none;
@@ -71,7 +71,7 @@
     display: flex;
     gap: 14px;
 
-    @include abstracts.breakpoint(lg) {
+    @include abstracts.screen(lg) {
         margin-top: 10px;
     }
 
@@ -86,11 +86,11 @@
         width: 36px;
         height: 36px;
 
-        @include abstracts.breakpoint(xl) {
+        @include abstracts.screen(xl) {
             display: none;
         }
 
-        @include abstracts.breakpoint(lg) {
+        @include abstracts.screen(lg) {
             display: initial;
         }
     }
@@ -118,7 +118,7 @@
         font-weight: 500;
         line-height: 150%;
 
-        @include abstracts.breakpoint(lg) {
+        @include abstracts.screen(lg) {
             margin-bottom: 26px;
         }
     }
@@ -126,7 +126,7 @@
     &__list {
         margin-top: 19px;
 
-        @include abstracts.breakpoint(lg) {
+        @include abstracts.screen(lg) {
             margin-top: 0;
         }
     }
@@ -169,11 +169,11 @@
         grid-template-columns: repeat(4, 1fr);
         max-height: var(--max-inner-height);
 
-        @include abstracts.breakpoint(lg) {
+        @include abstracts.screen(lg) {
         }
     }
 
-    @include abstracts.breakpoint(lg) {
+    @include abstracts.screen(lg) {
         height: auto;
         position: initial;
         grid-template-columns: 1fr;
