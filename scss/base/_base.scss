@@ -12,6 +12,7 @@ select,
 textarea,
 input,
 img {
+    outline: none;
     font-family: inherit;
     color: inherit;
     -webkit-tap-highlight-color: transparent;
@@ -20,7 +21,6 @@ img {
 button {
     border: none;
     padding: 0;
-    outline: none;
     background: transparent;
     cursor: pointer;
 }
