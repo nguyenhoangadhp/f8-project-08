@@ -40,3 +40,49 @@
         margin-top: 6px;
     }
 }
+
+// Button
+.btn {
+    height: 46px;
+    border-radius: 6px;
+    padding: 0 20px;
+    user-select: none;
+
+    background: #f8f8fb;
+    font-size: 1.8rem;
+    font-weight: 500;
+
+    + .btn {
+        margin-left: 20px;
+    }
+
+    &--text {
+        color: #9e9da8;
+        background: transparent;
+        font-weight: 400;
+    }
+
+    &--primary {
+        color: #1a162e;
+        background: #ffb700;
+    }
+
+    &--outline {
+        background: transparent;
+        border: 1px solid #d2d1d6;
+    }
+
+    &--rounded {
+        border-radius: 99px;
+    }
+
+    &:hover {
+        opacity: 0.9;
+    }
+
+    [disabled],
+    &--disabled {
+        opacity: 0.5;
+        pointer-events: none;
+    }
+}

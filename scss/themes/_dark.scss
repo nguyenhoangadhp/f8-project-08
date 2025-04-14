@@ -44,4 +44,10 @@ html.dark {
     // Like button
     --like-btn-bg: #292e39;
     --like-btn-shadow: rgba(124, 124, 124, 0.2);
+
+    // Filter form
+    --filter-form-bg: #3d414b;
+    --filter-form-shadow: 0px 40px 90px rgba(0, 0, 0, 0.4);
+    --filter-form-tag-bg: #171c28;
+    --filter-form-arrow: var(--dropdown-arrow-color);
 }

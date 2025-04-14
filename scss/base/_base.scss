@@ -12,14 +12,19 @@ select,
 textarea,
 input,
 img {
+    padding: 0;
+    border: none;
     outline: none;
     font-family: inherit;
     color: inherit;
     -webkit-tap-highlight-color: transparent;
 }
 
+input {
+    background: transparent;
+}
+
 button {
-    border: none;
     padding: 0;
     background: transparent;
     cursor: pointer;
