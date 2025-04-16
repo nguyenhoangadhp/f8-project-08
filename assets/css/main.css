@@ -1625,6 +1625,137 @@ html.dark {
   margin-left: auto;
 }
 
+.footer__inner {
+  margin-top: 100px;
+  padding: 50px 0;
+  border-top: 1px solid #eee;
+}
+.footer__row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.footer__col {
+  display: flex;
+  gap: 100px;
+}
+@media (max-width: 1199.98px) {
+  .footer__col {
+    gap: 200px;
+  }
+}
+@media (max-width: 1199.98px) {
+  .footer__col {
+    gap: 80px;
+  }
+}
+@media (max-width: 767.98px) {
+  .footer__col {
+    flex-direction: column;
+    gap: 50px;
+  }
+}
+.footer__item {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.footer__item-link {
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+.footer__item-link:hover {
+  text-decoration: underline;
+}
+.footer__heading {
+  font-size: 3rem;
+  font-weight: 500;
+}
+.footer__connect {
+  width: 300px;
+}
+@media (max-width: 1199.98px) {
+  .footer__connect {
+    margin-top: 60px;
+  }
+}
+@media (max-width: 767.98px) {
+  .footer__connect {
+    margin-top: 0;
+  }
+}
+.footer__connect-heading {
+  font-size: 3.6rem;
+  font-weight: 700;
+}
+.footer__connect-link {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.footer__connect-icon:hover {
+  opacity: 0.8;
+}
+.footer__connect-desc {
+  font-size: 1.6rem;
+  margin-top: 20px;
+  line-height: 1.4;
+}
+.footer__cta {
+  margin-top: 30px;
+}
+.footer__logo {
+  margin-right: 30px;
+}
+.footer__end {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 991.98px) {
+  .footer__end {
+    margin-left: -40px;
+  }
+}
+@media (max-width: 767.98px) {
+  .footer__end {
+    margin-left: 0;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+.footer__end-group {
+  margin-top: 4px;
+}
+@media (max-width: 767.98px) {
+  .footer__end-group {
+    margin: 16px 0 0 -10px;
+  }
+}
+.footer__end-desc {
+  padding: 0 10px;
+}
+@media (max-width: 575.98px) {
+  .footer__end-desc {
+    font-size: 1.4rem;
+  }
+}
+.footer__end-desc + .footer__end-desc {
+  border-left: 1px solid #ccc;
+}
+.footer__warm {
+  width: 55%;
+  margin-top: 30px;
+  line-height: 1.4;
+}
+@media (max-width: 991.98px) {
+  .footer__warm {
+    width: 100%;
+  }
+}
+
 .logo {
   display: flex;
   align-items: center;

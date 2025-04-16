@@ -1,0 +1,145 @@
+@use "../abstracts";
+
+.footer {
+    &__inner {
+        margin-top: 100px;
+        padding: 50px 0;
+        border-top: 1px solid #eee;
+    }
+
+    &__row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__col {
+        display: flex;
+        gap: 100px;
+
+        @include abstracts.screen(xl) {
+            gap: 200px;
+        }
+
+        @include abstracts.screen(xl) {
+            gap: 80px;
+        }
+
+        @include abstracts.screen(md) {
+            flex-direction: column;
+            gap: 50px;
+        }
+    }
+
+    &__item {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        &-link {
+            font-size: 1.6rem;
+            font-weight: 400;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__heading {
+        font-size: 3rem;
+        font-weight: 500;
+    }
+
+    // Footer Connect
+    &__connect {
+        width: 300px;
+
+        @include abstracts.screen(xl) {
+            margin-top: 60px;
+        }
+
+        @include abstracts.screen(md) {
+            margin-top: 0;
+        }
+
+        &-heading {
+            font-size: 3.6rem;
+            font-weight: 700;
+        }
+
+        &-link {
+            margin-top: 30px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        &-icon {
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+
+        &-desc {
+            font-size: 1.6rem;
+            margin-top: 20px;
+            line-height: 1.4;
+        }
+    }
+
+    &__cta {
+        margin-top: 30px;
+    }
+    // Footer End
+    &__logo {
+        margin-right: 30px;
+    }
+
+    &__end {
+        margin-top: 50px;
+        display: flex;
+        align-items: center;
+
+        @include abstracts.screen(lg) {
+            margin-left: -40px;
+        }
+
+        @include abstracts.screen(md) {
+            margin-left: 0;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        &-group {
+            margin-top: 4px;
+
+            @include abstracts.screen(md) {
+                margin: 16px 0 0 -10px;
+            }
+        }
+
+        &-desc {
+            padding: 0 10px;
+
+            @include abstracts.screen(sm) {
+                font-size: 1.4rem;
+            }
+        }
+
+        &-desc + &-desc {
+            border-left: 1px solid #ccc;
+        }
+    }
+
+    &__warm {
+        width: 55%;
+        margin-top: 30px;
+        line-height: 1.4;
+
+        @include abstracts.screen(lg) {
+            width: 100%;
+        }
+    }
+}
