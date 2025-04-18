@@ -8,25 +8,15 @@
     }
 
     &__row {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-
-    &__col {
-        display: flex;
-        gap: 100px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1.2fr;
 
         @include abstracts.screen(xl) {
-            gap: 200px;
+            grid-template-columns: 1.5fr 1.5fr 1fr;
         }
 
-        @include abstracts.screen(xl) {
-            gap: 80px;
-        }
-
-        @include abstracts.screen(md) {
-            flex-direction: column;
+        @include abstracts.screen(lg) {
+            grid-template-columns: 1fr;
             gap: 50px;
         }
     }
@@ -40,9 +30,10 @@
         &-link {
             font-size: 1.6rem;
             font-weight: 400;
+            transition: color 0.25s;
 
             &:hover {
-                text-decoration: underline;
+                color: #77dae6;
             }
         }
     }
@@ -54,13 +45,11 @@
 
     // Footer Connect
     &__connect {
-        width: 300px;
-
         @include abstracts.screen(xl) {
             margin-top: 60px;
         }
 
-        @include abstracts.screen(md) {
+        @include abstracts.screen(lg) {
             margin-top: 0;
         }
 
@@ -73,12 +62,17 @@
             margin-top: 30px;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 20px;
         }
 
         &-icon {
+            transition: opacity 0.25s;
             &:hover {
                 opacity: 0.8;
+            }
+
+            &-link {
+                font-size: 2.2rem;
             }
         }
 
@@ -113,33 +107,47 @@
         }
 
         &-group {
-            margin-top: 4px;
+            margin-top: 2px;
+            display: flex;
+            gap: 10px;
 
             @include abstracts.screen(md) {
-                margin: 16px 0 0 -10px;
+                margin-top: 20px;
+            }
+
+            & a {
+                transition: color 0.25s;
+                &:hover {
+                    color: #77dae6;
+                }
             }
         }
 
         &-desc {
-            padding: 0 10px;
-
             @include abstracts.screen(sm) {
                 font-size: 1.4rem;
             }
-        }
 
-        &-desc + &-desc {
-            border-left: 1px solid #ccc;
+            &--sepa {
+                height: 100%;
+                border-right: 1px solid #ccc;
+                padding-right: 10px;
+
+                @include abstracts.screen(sm) {
+                    border-color: transparent;
+                }
+            }
         }
     }
 
-    &__warm {
-        width: 55%;
+    &__copyright {
         margin-top: 30px;
-        line-height: 1.4;
+        font-size: 1.6rem;
+        font-weight: 400;
+        text-align: center;
 
-        @include abstracts.screen(lg) {
-            width: 100%;
+        @include abstracts.screen(sm) {
+            font-size: 1.4rem;
         }
     }
 }
