@@ -15,10 +15,35 @@
 }
 
 .top-bar {
+    @extend %flexItemCenter;
     position: relative;
     z-index: 1;
 
-    @extend %flexItemCenter;
+    &__logo {
+        @include abstracts.screen(lg) {
+            gap: 10px !important;
+            margin-left: 40px;
+
+            &-img {
+                width: 24px;
+                height: 24px;
+            }
+        }
+
+        @include abstracts.screen(md) {
+            margin-left: 0px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            translate: -50% -50%;
+        }
+
+        &-title {
+            @include abstracts.screen(lg) {
+                font-size: 1.8rem !important;
+            }
+        }
+    }
 
     @include abstracts.screen(lg) {
         padding: 20px 0;

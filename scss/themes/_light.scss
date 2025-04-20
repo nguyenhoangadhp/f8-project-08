@@ -52,6 +52,10 @@ html {
     --filter-form-tag-bg: #f8f8fb;
     --filter-form-footer-bg: #fff;
 
-    // Sign in
+    // Sign up
     --auth-content-bg: #fff;
+
+    @include abstracts.screen(md) {
+        --auth-intro-bg: #fff;
+    }
 }
