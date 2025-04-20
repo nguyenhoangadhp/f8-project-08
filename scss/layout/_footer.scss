@@ -41,6 +41,10 @@
     &__heading {
         font-size: 3rem;
         font-weight: 500;
+
+        @include abstracts.screen(md) {
+            font-size: 2rem;
+        }
     }
 
     // Footer Connect
@@ -56,6 +60,10 @@
         &-heading {
             font-size: 3.6rem;
             font-weight: 700;
+
+            @include abstracts.screen(md) {
+                font-size: 2.4rem;
+            }
         }
 
         &-link {
@@ -80,6 +88,7 @@
             font-size: 1.6rem;
             margin-top: 20px;
             line-height: 1.4;
+            padding-right: 35px;
         }
     }
 
@@ -96,10 +105,6 @@
         display: flex;
         align-items: center;
 
-        @include abstracts.screen(lg) {
-            margin-left: -40px;
-        }
-
         @include abstracts.screen(md) {
             margin-left: 0;
             flex-direction: column;
@@ -113,6 +118,10 @@
 
             @include abstracts.screen(md) {
                 margin-top: 20px;
+            }
+
+            @include abstracts.screen(sm) {
+                flex-direction: column;
             }
 
             & a {

@@ -12,11 +12,12 @@
         font-size: 3rem;
         font-weight: 500;
         line-height: 146.667%;
+        color: var(--auth-heading-color);
     }
 
     &__desc {
         color: #9e9da8;
-        padding: 0 30px;
+        padding: 0 20px;
         margin-top: 10px;
         font-size: 1.6rem;
         font-weight: 500;
@@ -41,6 +42,7 @@
         justify-content: center;
         gap: 50px;
         background: var(--auth-intro-bg);
+        color: var(--auth-intro-text-color);
 
         &-text {
             max-width: 412px;

@@ -1349,7 +1349,10 @@ html {
   --filter-form-shadow: 0px 40px 90px rgba(200, 200, 200, 0.4);
   --filter-form-tag-bg: #f8f8fb;
   --filter-form-footer-bg: #fff;
+  --form-checkbox-after: #fff;
   --auth-content-bg: #fff;
+  --form-placeholder-color: #d2d1d6;
+  --form-checkbox-after-color: #fff;
 }
 @media (max-width: 991.98px) {
   html {
@@ -1400,10 +1403,21 @@ html.dark {
   --filter-form-shadow: 0px 40px 90px rgba(0, 0, 0, 0.4);
   --filter-form-tag-bg: #171c28;
   --filter-form-arrow: var(--dropdown-arrow-color);
+  --auth-content-bg: #292e39;
+  --auth-intro-bg: #171c28;
+  --auth-intro-text-color: #b9babe;
+  --auth-heading-color: #b9babe;
+  --form-placeholder-color: #b9babe;
+  --form-checkbox-after: #292e39;
 }
 @media (max-width: 991.98px) {
   html.dark {
     --header-shadow-color: rgba(0, 0, 0, 0.2);
+  }
+}
+@media (max-width: 767.98px) {
+  html.dark {
+    --auth-intro-bg: #171c28;
   }
 }
 
@@ -1712,6 +1726,11 @@ html.dark {
   font-size: 3rem;
   font-weight: 500;
 }
+@media (max-width: 767.98px) {
+  .footer__heading {
+    font-size: 2rem;
+  }
+}
 @media (max-width: 1199.98px) {
   .footer__connect {
     margin-top: 60px;
@@ -1725,6 +1744,11 @@ html.dark {
 .footer__connect-heading {
   font-size: 3.6rem;
   font-weight: 700;
+}
+@media (max-width: 767.98px) {
+  .footer__connect-heading {
+    font-size: 2.4rem;
+  }
 }
 .footer__connect-link {
   margin-top: 30px;
@@ -1745,6 +1769,7 @@ html.dark {
   font-size: 1.6rem;
   margin-top: 20px;
   line-height: 1.4;
+  padding-right: 35px;
 }
 .footer__cta {
   margin-top: 30px;
@@ -1756,11 +1781,6 @@ html.dark {
   margin-top: 50px;
   display: flex;
   align-items: center;
-}
-@media (max-width: 991.98px) {
-  .footer__end {
-    margin-left: -40px;
-  }
 }
 @media (max-width: 767.98px) {
   .footer__end {
@@ -1777,6 +1797,11 @@ html.dark {
 @media (max-width: 767.98px) {
   .footer__end-group {
     margin-top: 20px;
+  }
+}
+@media (max-width: 575.98px) {
+  .footer__end-group {
+    flex-direction: column;
   }
 }
 .footer__end-group a {
@@ -2240,6 +2265,11 @@ html.dark {
   font-weight: 500;
   line-height: 150%;
 }
+@media (max-width: 767.98px) {
+  .product-card__title {
+    font-size: 1.5rem;
+  }
+}
 .product-card__brand {
   margin: 16px 0;
   color: #9e9da8;
@@ -2565,7 +2595,7 @@ html.dark {
   }
 }
 .form__input::placeholder {
-  color: #d2d1d6;
+  color: var(--form-placeholder-color);
 }
 .form__input-icon {
   margin-left: 12px;
@@ -2607,12 +2637,15 @@ html.dark {
   width: 13px;
   height: 7px;
   border: 2.5px solid;
-  border-color: transparent transparent #fff #fff;
+  border-color: transparent transparent var(--form-checkbox-after) var(--form-checkbox-after);
   rotate: -45deg;
 }
 .form__checkbox:has(:checked)::before {
   border-color: #ffb700;
   background: #ffb700;
+}
+.form__checkbox:has(:checked)::after {
+  border-color: transparent transparent #fff #fff;
 }
 
 .home__container {
@@ -2667,10 +2700,11 @@ html.dark {
   font-size: 3rem;
   font-weight: 500;
   line-height: 146.667%;
+  color: var(--auth-heading-color);
 }
 .auth__desc {
   color: #9e9da8;
-  padding: 0 30px;
+  padding: 0 20px;
   margin-top: 10px;
   font-size: 1.6rem;
   font-weight: 500;
@@ -2693,6 +2727,7 @@ html.dark {
   justify-content: center;
   gap: 50px;
   background: var(--auth-intro-bg);
+  color: var(--auth-intro-text-color);
 }
 .auth__intro-text {
   max-width: 412px;

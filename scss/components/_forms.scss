@@ -80,7 +80,7 @@
         }
 
         &::placeholder {
-            color: #d2d1d6;
+            color: var(--form-placeholder-color);
         }
 
         &-icon {
@@ -129,7 +129,7 @@
             width: 13px;
             height: 7px;
             border: 2.5px solid;
-            border-color: transparent transparent #fff #fff;
+            border-color: transparent transparent var(--form-checkbox-after) var(--form-checkbox-after);
             rotate: -45deg;
         }
 
@@ -137,6 +137,10 @@
             &::before {
                 border-color: #ffb700;
                 background: #ffb700;
+            }
+
+            &::after {
+                border-color: transparent transparent #fff #fff;
             }
         }
     }
