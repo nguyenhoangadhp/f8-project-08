@@ -1,0 +1,12 @@
+@use "../abstracts";
+
+.product-page {
+    background: var(--product-detail-bg);
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-container {
+    margin-top: 30px;
+}
