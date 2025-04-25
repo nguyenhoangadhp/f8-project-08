@@ -144,4 +144,76 @@
             }
         }
     }
+
+    &__label {
+        font-size: 2.2rem;
+        font-weight: 500;
+        line-height: 145.455%;
+
+        &--small {
+            display: inline-block;
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+    }
+
+    &__select-wrap {
+        border-radius: 6px;
+        border: 1px solid #d2d1d6;
+
+        height: 45px;
+        display: flex;
+        align-items: center;
+    }
+
+    &__select {
+        padding: 0 14px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        min-width: var(--width, 108px);
+        height: calc(100% - 10px);
+
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 142.857%;
+        cursor: pointer;
+
+        @include abstracts.screen(xl) {
+            flex: 1;
+        }
+    }
+
+    &__select + &__select {
+        border-left: 1px solid #d2d1d6;
+    }
+
+    &__tags {
+        margin-top: 20px;
+
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px 20px;
+
+        @include abstracts.screen(xl) {
+            gap: 10px;
+        }
+    }
+
+    &__tag {
+        color: #9e9da8;
+        padding: 6px 12px;
+        border-radius: 6px;
+        background: var(--form-tag-bg);
+
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 142.857%;
+        transition: color 0.25s;
+
+        &:hover {
+            color: var(--text-color);
+        }
+    }
 }

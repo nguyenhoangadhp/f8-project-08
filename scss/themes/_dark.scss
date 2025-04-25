@@ -48,7 +48,7 @@ html.dark {
     // Filter form
     --filter-form-bg: #3d414b;
     --filter-form-shadow: 0px 40px 90px rgba(0, 0, 0, 0.4);
-    --filter-form-tag-bg: #171c28;
+    --form-tag-bg: #171c28;
     --filter-form-arrow: var(--dropdown-arrow-color);
 
     // Sign up
@@ -67,8 +67,24 @@ html.dark {
 
     // Product Detail
     --product-detail-bg: #292e39;
+    --product-detail-info-bg: #171c28;
+    --product-detail-info-content-bg: transparent;
+    --product-detail-tag-bg: #292e39;
+
+    @include abstracts.screen(md) {
+        --product-detail-bg: #292e39;
+        --product-detail-info-content-bg: #171c28;
+        --product-detail-info-bg: #171c28;
+    }
 
     // Breadcrumbs
     --breadcrumbs-bg: #171c28;
     --breadcrumbs-shadow: rgba(23, 28, 40, 0.2);
+    @include abstracts.screen(md) {
+        --breadcrumbs-bg: #171c28;
+    }
+
+    // Search bar
+    --search-bar-bg: #171c28;
+    --search-bar-input-color: #9e9da8;
 }
