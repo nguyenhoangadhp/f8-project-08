@@ -229,10 +229,18 @@
         }
     }
 
+    &__btn-wrap {
+        position: relative;
+
+        &:hover .act-dropdown {
+            display: block;
+        }
+    }
+
     &__btn {
         gap: 10px;
+        padding: 13px 0;
         @extend %flexItemCenter;
-
         cursor: pointer;
     }
 
@@ -286,5 +294,124 @@
 
     &__qtt {
         margin-left: auto;
+    }
+}
+
+// Action dropdown
+.act-dropdown {
+    display: none;
+    position: absolute;
+    right: -76px;
+    top: 50px;
+    padding-top: 22px;
+    width: min(580px, 100vw);
+
+    &__inner {
+        position: relative;
+        padding: 20px;
+        border-radius: 20px;
+        background: var(--header-act-dropdown-bg);
+        box-shadow: 0px 40px 90px 20px var(--header-act-dropdown-shadow);
+    }
+
+    &__arrow {
+        position: absolute;
+        top: -12px;
+        right: 110px;
+        width: 40px;
+
+        filter: var(--dropdown-arrow-color);
+    }
+
+    &__title {
+        font-size: 2.2rem;
+        font-weight: 500;
+        line-height: 145.455%;
+    }
+
+    &__view-all {
+        color: var(--header-act-dropdown-viewall);
+        font-size: 1.8rem;
+        font-weight: 400;
+        line-height: 145.455%;
+    }
+
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+
+    &__bottom {
+        margin: 20px 0;
+        padding: 20px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        border-width: 1.5px 0;
+        border-color: var(--header-act-dropdown-boder-color);
+        border-style: solid;
+    }
+
+    &__label,
+    &__value {
+        font-size: 1.8rem;
+        font-weight: 400;
+        line-height: 145.455%;
+    }
+
+    &__label--bold,
+    &__value--bold {
+        font-weight: 500;
+    }
+
+    &__row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__checkout {
+        display: flex;
+        justify-content: flex-end;
+
+        &-btn {
+            min-width: 278px;
+        }
+    }
+}
+
+.cart-preview-item {
+    text-align: left;
+
+    &__img-wrap {
+        position: relative;
+        padding-top: 100%;
+        border: 1.5px solid var(--header-act-dropdown-boder-color);
+        border-radius: 10px;
+    }
+
+    &__thumb {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    &__title {
+        margin-top: 14px;
+        font-size: 1.5rem;
+        line-height: 142.857%;
+    }
+
+    &__price {
+        margin-top: 6px;
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 146.667%;
     }
 }
