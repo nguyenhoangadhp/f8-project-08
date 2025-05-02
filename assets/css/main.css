@@ -1382,6 +1382,8 @@ html {
   --checkout-cart-info-shadow: rgba(237, 237, 246, 0.2);
   --checkout-border-color: #d2d1d6;
   --checkout-price-wrap-color: #9e9da8;
+  --dialog-bg: #fff;
+  --dialog-shadow: rgba(237, 237, 246, 0.2);
 }
 @media (max-width: 991.98px) {
   html {
@@ -1473,6 +1475,8 @@ html.dark {
   --checkout-cart-info-shadow: rgba(23, 28, 40, 0.2);
   --checkout-border-color: #292e39;
   --checkout-price-wrap-color: #9e9da8;
+  --dialog-bg: #3d414b;
+  --dialog-shadow: rgba(0, 0, 0, 0.4);
 }
 @media (max-width: 991.98px) {
   html.dark {
@@ -2394,14 +2398,18 @@ html.dark {
   background: #f8f8fb;
   font-size: 1.8rem;
   font-weight: 500;
+  white-space: nowrap;
 }
 .btn + .btn:not(.btn--no-margin) {
   margin-left: 20px;
 }
 .btn--text {
-  color: #9e9da8;
   background: transparent;
   font-weight: 400;
+}
+.btn--small {
+  height: 40px;
+  padding: 0 16px;
 }
 .btn--primary {
   color: #1a162e;
@@ -3057,6 +3065,58 @@ html.dark {
   height: 1.5px;
   background: var(--text-content-hr-bg);
   margin: 40px 0;
+}
+
+.dialog__overlay, .dialog {
+  position: fixed;
+  inset: 0;
+}
+
+.dialog {
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+}
+.dialog.show {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity visibility 0.2s;
+}
+.dialog__overlay {
+  background: rgba(0, 0, 0, 0.4);
+}
+.dialog__content {
+  max-width: min(450px, 100% - 40px);
+  position: relative;
+  z-index: 1;
+  background: var(--dialog-bg);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0px 20px 60px 10px var(--dialog-shadow);
+}
+.dialog__text {
+  font-size: 1.8rem;
+  line-height: 1.5;
+}
+.dialog__bottom {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+@media (max-width: 767.98px) {
+  .dialog {
+    padding: 20px;
+    gap: 20px;
+  }
+  .dialog__btn {
+    flex: 1;
+  }
 }
 
 .home__container {
