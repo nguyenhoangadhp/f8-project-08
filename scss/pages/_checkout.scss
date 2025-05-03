@@ -29,6 +29,19 @@
         padding: 16px;
     }
 
+    &__heading {
+        font-size: 2.4rem;
+        font-weight: 700;
+        line-height: 141.667%;
+    }
+
+    &__sub-heading {
+        margin: 30px 0;
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 144.444%;
+    }
+
     &__list {
         margin-top: -30px;
 
@@ -232,6 +245,10 @@
         font-size: 1.5rem;
         font-weight: 500;
         line-height: 146.667%;
+
+        &-btn {
+            display: flex;
+        }
     }
 
     &__total-price {
@@ -285,8 +302,132 @@
     }
 
     &__desc {
+        width: min(520px, 90%);
         font-size: 1.4rem;
         font-weight: 400;
         line-height: 142.857%;
+    }
+}
+
+.user-address {
+    &__title {
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 144.444%;
+    }
+
+    &__desc {
+        margin-top: 4px;
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 146.667%;
+    }
+
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+
+        @include abstracts.screen(md) {
+            align-items: flex-start;
+            flex-direction: column;
+        }
+    }
+
+    &__btn {
+        @include abstracts.screen(md) {
+            height: 46px;
+        }
+    }
+
+    &__message {
+        margin-top: 30px;
+        font-weight: 500;
+    }
+
+    &__link {
+        padding-left: 10px;
+        color: #0071dc;
+    }
+}
+
+.address-card {
+    margin-top: 30px;
+    display: flex;
+    gap: 16px;
+
+    @include abstracts.screen(md) {
+        flex-direction: column;
+    }
+
+    &__left {
+        flex: 1;
+        display: flex;
+        gap: 16px;
+    }
+
+    &__title {
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 144.444%;
+    }
+
+    &__desc {
+        margin-top: 4px;
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 146.667%;
+    }
+
+    &__list {
+        margin-top: 20px;
+        display: flex;
+        gap: 30px;
+        list-style: disc inside;
+
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height: 142.857%;
+
+        @include abstracts.screen(sm) {
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        &-item {
+            margin-left: 8px;
+        }
+    }
+
+    &__control {
+        height: 100%;
+        display: flex;
+        align-items: flex-end;
+
+        &-btn {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            font-size: 1.8rem;
+            line-height: 144.444%;
+        }
+    }
+
+    &__checkbox {
+        &-input {
+            appearance: none;
+            &:not(:checked)::before {
+                content: url("../icons/checkbox-uncheck.svg");
+                filter: var(--icon-color);
+            }
+        }
+
+        &-input:checked {
+            &::before {
+                content: url("../icons/checkbox-checked.svg");
+            }
+        }
     }
 }
