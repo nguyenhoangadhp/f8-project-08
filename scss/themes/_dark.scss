@@ -70,7 +70,10 @@ html.dark {
 
     // Form
     --form-placeholder-color: #b9babe;
-    --form-checkbox-after: #292e39;
+    --form-checkbox-after: #3d414b;
+    --form-select-dialog-shadow: rgba($color: #fff, $alpha: 0.2);
+    --form-select-dialog-bg: #3d414b;
+    --form-option-hover-bg: #292e39;
 
     // Product Detail
     --product-detail-bg: #292e39;
