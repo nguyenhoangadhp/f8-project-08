@@ -29,10 +29,30 @@
         padding: 16px;
     }
 
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 30px;
+    }
+
     &__heading {
         font-size: 2.4rem;
         font-weight: 700;
         line-height: 141.667%;
+
+        &--lv2 {
+            font-size: 2.2rem;
+            font-weight: 500;
+            line-height: 145.455%;
+        }
+    }
+
+    &__desc {
+        margin-top: 6px;
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 146.667%;
     }
 
     &__sub-heading {
@@ -52,6 +72,10 @@
 
     &__bottom {
         margin-top: 30px;
+    }
+
+    &__form {
+        margin-bottom: 20px;
     }
 
     &__row,
@@ -94,9 +118,8 @@
         }
 
         &-btn {
-            font-size: 2.2rem;
+            font-size: 1.8rem;
             margin-top: 30px;
-            height: 68px;
 
             @include abstracts.screen(md) {
                 font-size: 1.6rem;
@@ -113,6 +136,31 @@
     &__sub-label {
         font-size: 1.6rem;
         font-weight: 400;
+    }
+
+    &__edit-btn {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        font-size: 1.8rem;
+        line-height: 144.444%;
+    }
+
+    &__checkbox {
+        &-input {
+            appearance: none;
+            &:not(:checked)::before {
+                content: url("../icons/checkbox-uncheck.svg");
+                filter: var(--icon-color);
+            }
+        }
+
+        &-input:checked {
+            &::before {
+                content: url("../icons/checkbox-checked.svg");
+            }
+        }
     }
 }
 
@@ -404,30 +452,88 @@
         height: 100%;
         display: flex;
         align-items: flex-end;
+    }
+}
 
-        &-btn {
-            display: flex;
-            align-items: center;
-            gap: 10px;
+.payment-item {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    background: var(--checkout-payment-item-bg);
 
-            font-size: 1.8rem;
-            line-height: 144.444%;
+    &--pointer {
+        cursor: pointer;
+    }
+
+    &__content {
+        display: flex;
+        align-self: center;
+        flex: 1;
+        gap: 10px;
+
+        @include abstracts.screen(md) {
+            flex-direction: column;
+            align-items: flex-start;
         }
     }
 
-    &__checkbox {
-        &-input {
-            appearance: none;
-            &:not(:checked)::before {
-                content: url("../icons/checkbox-uncheck.svg");
-                filter: var(--icon-color);
-            }
-        }
+    &__info {
+        flex: 1;
+    }
 
-        &-input:checked {
-            &::before {
-                content: url("../icons/checkbox-checked.svg");
-            }
+    &__title {
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 144.444%;
+    }
+
+    &__detail {
+        padding: 10px 0 10px 10px;
+    }
+
+    &__desc {
+        margin-top: 4px;
+    }
+
+    &__desc,
+    &__detail {
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 146.667%;
+    }
+
+    &__detail {
+        color: #77dae6;
+        text-decoration: underline;
+    }
+
+    &__thumb {
+        width: 70px;
+        height: 54px;
+        object-fit: cover;
+
+        @include abstracts.screen(md) {
+            align-self: flex-start;
         }
+    }
+
+    &__cost {
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 144.444%;
+        color: #9e9da8;
+    }
+
+    &__checkbox {
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+        gap: 14px;
+    }
+    &__checkbox-input:checked + &__cost {
+        color: inherit;
     }
 }

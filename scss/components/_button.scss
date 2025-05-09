@@ -87,6 +87,11 @@
         border-radius: 99px;
     }
 
+    &--warning {
+        color: #fff;
+        background-color: #e32012;
+    }
+
     &:hover {
         opacity: 0.9;
     }

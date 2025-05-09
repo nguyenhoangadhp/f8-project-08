@@ -79,14 +79,14 @@
         width: 65px;
         height: 65px;
         object-fit: contain;
-        border: 1.5px solid rgb(158, 157, 168, 0.3);
+        border: 1px solid rgb(158, 157, 168, 0.3);
         opacity: 0.8;
         transition: opacity, border-color 0.3s;
 
         &:not(&--current):hover {
             cursor: pointer;
             opacity: 1;
-            border: 1.5px solid #9e9da8;
+            border: 1px solid #9e9da8;
         }
 
         &--current {
