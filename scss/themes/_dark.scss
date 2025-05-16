@@ -5,16 +5,15 @@ html.dark {
     --icon-color: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7495%) hue-rotate(143deg)
         brightness(111%) contrast(100%);
     --body-bg-color: #292e39;
-    --header-bg-color: #171c28;
     --top-act-group-bg-color: #292e39;
     --top-act-group-shadow: 0px 20px 60px 10px rgba(0, 0, 0, 0.2);
     --top-act-group-separate: #ededf6;
 
     // Header
+    --header-bg-color: #171c28;
     --header-act-dropdown-bg: #3d414b;
     --header-act-dropdown-shadow: rgba(23, 28, 40, 0.4);
     --header-act-dropdown-viewall: #0071dc;
-
     --header-act-dropdown-boder-color: #171c28;
 
     // Dropdown
@@ -115,4 +114,19 @@ html.dark {
     // Dialog
     --dialog-bg: #3d414b;
     --dialog-shadow: rgba(0, 0, 0, 0.4);
+
+    // Footer
+    --footer-bg-color: #171c28;
+
+    // Profile
+    --profile-sidebar-bg: #171c28;
+    --profile-sidebar-shadow: rgba(23, 28, 40, 0.2);
+    --profile-sidebar-link-hover: #2f3441;
+
+    // Account info
+    --account-info-bg: #292e39;
+    --account-info-icon-bg: #171c28;
+
+    // Separate
+    --separate-color: #292e39;
 }

@@ -5,16 +5,15 @@ html {
     --icon-color: brightness(0) saturate(100%) invert(9%) sepia(33%) saturate(996%) hue-rotate(210deg) brightness(91%)
         contrast(98%);
     --body-bg-color: #f6f6f6;
-    --header-bg-color: #eee;
     --top-act-group-bg-color: #fff;
     --top-act-group-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
     --top-act-group-separate: #ededf6;
 
     // Header
+    --header-bg-color: #eee;
     --header-act-dropdown-bg: #fff;
     --header-act-dropdown-shadow: rgba(200, 200, 200, 0.4);
     --header-act-dropdown-viewall: #0071dc;
-
     --header-act-dropdown-boder-color: #d2d1d6;
 
     // Dropdown
@@ -116,4 +115,19 @@ html {
     // Dialog
     --dialog-bg: #fff;
     --dialog-shadow: rgba(237, 237, 246, 0.2);
+
+    // Footer
+    --footer-bg-color: #eee;
+
+    // Profile
+    --profile-sidebar-bg: #fff;
+    --profile-sidebar-shadow: rgba(237, 237, 246, 0.2);
+    --profile-sidebar-link-hover: #ebebeb;
+
+    // Account info
+    --account-info-bg: #f6f6f6;
+    --account-info-icon-bg: #fff;
+
+    // Separate
+    --separate-color: #d2d1d6;
 }

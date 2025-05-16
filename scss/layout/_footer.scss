@@ -1,6 +1,7 @@
 @use "../abstracts";
 
 .footer {
+    background: var(--footer-bg-color);
     &__inner {
         padding: 50px 0;
     }
@@ -152,6 +153,8 @@
         font-size: 1.6rem;
         font-weight: 400;
         text-align: center;
+        pointer-events: none;
+        user-select: none;
 
         @include abstracts.screen(sm) {
             font-size: 1.4rem;
