@@ -5,7 +5,7 @@
     width: min(1240px, 100%);
     position: absolute;
     left: 0;
-    padding-top: 54px;
+    padding-top: 50px;
 
     @include abstracts.screen(lg) {
         position: initial;
