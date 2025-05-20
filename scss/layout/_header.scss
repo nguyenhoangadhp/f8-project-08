@@ -254,6 +254,11 @@
         border-radius: 8px;
         width: 50px;
         height: 50px;
+        position: relative;
+
+        &:hover .act-dropdown {
+            display: block;
+        }
     }
 
     &__avatar {
@@ -268,6 +273,15 @@
         width: 1px;
         height: 30px;
         background: var(--top-act-group-separate);
+    }
+
+    &__dropdown {
+        right: -10px !important;
+        width: min(300px, 100vw) !important;
+
+        &-arrow {
+            right: 15px !important;
+        }
     }
 }
 
@@ -419,5 +433,53 @@
         font-size: 1.5rem;
         font-weight: 500;
         line-height: 146.667%;
+    }
+}
+
+// User menu
+.user-menu {
+    &__top {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    &__avatar {
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    &__name {
+        margin-bottom: 8px;
+        font-weight: 600;
+        font-size: 1.8rem;
+    }
+
+    &__list {
+        margin-top: 30px;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 15px;
+        padding: 10px 0;
+
+        &:hover {
+            font-weight: 500;
+        }
+    }
+
+    &__icon {
+        width: 20px;
+    }
+
+    &__separate {
+        padding-top: 10px;
+        margin-top: 10px;
+        border-top: 1px solid var(--separate-color);
     }
 }

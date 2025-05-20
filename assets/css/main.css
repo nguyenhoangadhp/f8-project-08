@@ -1780,6 +1780,10 @@ html.dark {
   border-radius: 8px;
   width: 50px;
   height: 50px;
+  position: relative;
+}
+.top-act__user:hover .act-dropdown {
+  display: block;
 }
 .top-act__avatar {
   display: block;
@@ -1792,6 +1796,13 @@ html.dark {
   width: 1px;
   height: 30px;
   background: var(--top-act-group-separate);
+}
+.top-act__dropdown {
+  right: -10px !important;
+  width: min(300px, 100vw) !important;
+}
+.top-act__dropdown-arrow {
+  right: 15px !important;
 }
 
 .nav-btn {
@@ -1919,6 +1930,44 @@ html.dark {
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 146.667%;
+}
+
+.user-menu__top {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.user-menu__avatar {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.user-menu__name {
+  margin-bottom: 8px;
+  font-weight: 600;
+  font-size: 1.8rem;
+}
+.user-menu__list {
+  margin-top: 30px;
+}
+.user-menu__link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 10px 0;
+}
+.user-menu__link:hover {
+  font-weight: 500;
+}
+.user-menu__icon {
+  width: 20px;
+}
+.user-menu__separate {
+  padding-top: 10px;
+  margin-top: 10px;
+  border-top: 1px solid var(--separate-color);
 }
 
 .footer {
